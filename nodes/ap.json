@@ -1,0 +1,10 @@
+{
+  "rbenv": {
+    "versions": ["2.1.1", "2.1.2"],
+    "global": "2.1.2",
+    "gems": ["bundler"]
+  },
+  "rails": {
+    "versions": "4.2.0"
+  }
+}
