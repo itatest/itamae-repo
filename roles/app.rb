@@ -1,3 +1,4 @@
+# Default attributes
 node.reverse_merge!(
   {
     'rbenv' =>
