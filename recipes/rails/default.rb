@@ -1,4 +1,4 @@
-include_recipe '../ruby/ruby.rb'
+include_recipe '../ruby/default.rb'
 
 RBENV_SCRIPT = "/etc/profile.d/rbenv.sh"
 
@@ -19,6 +19,11 @@ end
 execute "install rails by bundle" do
   command "source #{RBENV_SCRIPT}; bundle install --gemfile=/var/itamae/Gemfile --path /var/itamae/vendor/bundle; rbenv rehash"
   not_if "test -f /var/itamae/Gemfile.lock"
+end
+
+execute "update rails by bundle" do
+  command "source #{RBENV_SCRIPT}; bundle update --gemfile=/var/itamae/Gemfile --path /var/itamae/vendor/bundle; rbenv rehash"
+  only_if "test -f /var/itamae/Gemfile.lock"
 end
 
 #[
