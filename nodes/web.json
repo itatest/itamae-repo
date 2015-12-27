@@ -1,0 +1,6 @@
+{
+  "nginx": {
+    "upstreamIp": "127.0.0.1",
+    "upstreamPort": "13000"
+  }
+}
